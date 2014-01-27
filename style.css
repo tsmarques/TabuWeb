@@ -1,0 +1,153 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-image: url('images/back.jpg');
+}
+
+div.wrap { /*PARTE CENTRAL DA JANELA*/
+	width: 760px;
+	height: 620px;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.3);
+	margin-top: 100px;
+	position: relative;
+}
+
+div.titulo { /*TITULO PRINCIPAL*/
+	text-align: center;
+}
+
+hr { /*BARRA HORIZONTAL*/
+	color: rgba(0, 0, 0, 0.4);
+}
+
+div.esquerda { /*MENU*/
+	width: 200px;
+	height: 320px;
+	margin-left: 10px;
+	/*background-color: black; */
+	/*opacity: 0.2; */
+	background: rgba(250, 250, 250, 0.2);
+	float: left;
+	display: inline-block;
+}
+
+div.apresentacao { /*TEXTO DE APRESENTACAO DO JOGO*/
+	width: 740px;
+	height: 120px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+div.apresentacao p { /*COR DO TEXTO DE APRESENTACAO*/
+	color: white;
+}
+
+div.config { /*MENU DE CONFIG DO JOGO */
+	color: black;
+	text-align: center;
+}
+
+
+
+#cenario { /*CENARIO DO JOGO*/
+	width: 520px;
+	height: 320px;
+	background-image: url('images/cenarioMain.jpg');
+	float: right;
+	margin-right: 15px;
+	display: inline-block;
+	opacity: 1;
+}
+
+#jogo { /*DISPLAY DAS CONTAS*/
+	width: 150px;
+	height: 70px;
+	margin: 0 auto;
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top: 50px;
+	visibility: hidden;
+	text-align: center;
+}
+
+#answer { /*CAIXA DE RESPOSTA */
+	text-align: center;
+	position: relative;
+	margin-top: 2px;
+	visibility: hidden;
+}
+
+#time { /*DIV QUE TEM O CONTADOR*/
+	width: 75px;
+	height: 70px;
+	background: rgba(0, 0, 0, 0.5);
+	position: relative;
+	float: right;
+	margin-right: 100px;
+	margin-top: -97px;
+	visibility: hidden;
+}
+
+#tempo { /*LABEL PARA MOSTRAR CONTADOR */
+	font-size: 35px;
+	color: red;
+	top: 16px;
+	left: 22px;
+	position: relative;
+}
+
+#player1 { /*BARRA DE POSICAO DO JOGADOR */
+	width: 500px;
+	height: 45px;
+	margin: 0 auto;
+	background-color: rgba(250, 250, 250, 0.4);
+	position: relative;
+	margin-top: 65px;
+	visibility: hidden;
+}
+
+#player2 { /*BARRA DE POSICAO DO JOGADOR 2 */
+	width: 500px;
+	height: 45px;
+	margin: 0 auto;
+	background: rgba(250, 250, 250, 0.4);
+	position: relative;
+	margin-top: 5px;
+	visibility: hidden;
+}
+
+#background1 { /*AVATAR DO JOGADOR */
+	width: 56px;
+	height: 45px;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: 0px;
+}
+
+#background2 { /*AVATAR DO JOGADOR 2 */
+	width: 56px;
+	height: 45px;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: 0px;
+}
+
+#honra { /*QUADRO DE HONRA */
+	visibility: hidden;
+	position: relative;
+	top: -250px;
+	left: 284px;
+}
+td { /*TAMANHO DAS CELULAS DO QUADRO DE HONRA*/
+	width: 70px;
+	text-align: center;
+}
+
+#goBack { /*BUTAO PARA VOLTAR A JOGAR*/
+	visibility: hidden;
+	position: absolute;
+	top: 283px;
+	right: 388px;
+	border: 0px;
+}

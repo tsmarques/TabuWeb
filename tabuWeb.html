@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>TabuWeb</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="titulo">
+			<img src="images/titulo.png" alt="title">
+		</div>
+		<div class="apresentacao">
+			<p>
+				<strong>O TabuWeb</strong> poderá ser jogado individualmente ou
+				contra outros jogadores na web. Ao longo de um jogo vão aparecendo
+				operações aritméticas envolvendo 2 algarismos, como "2 + 2" ou "4 x
+				3". Os jogadores deverão de responder qual o resultado da operação o
+				mais rapidamente possível. Cada operação acertada dará um
+				determinado número de pontos, ao que será subtraído o número de
+				milissegundos que demorou a resposta. <em><strong>O 1º
+						jogador a chegar a meta ganha.</strong></em>
+			</p>
+		</div>
+		<hr>
+		<div class="esquerda">
+			<div class="config">
+				<p>
+					<label for="nick"><em><strong>Nickname: </strong></em></label><br>
+					<input type="text" style="width: 100px" id="nick">
+				<p>
+					<em><strong>Operações</strong></em>
+				</p>
+				<input id="plus" type="radio" name="op" value="soma"> + <input
+					id="sub" type="radio" name="op" value="subt"> - <br> <br>
+				<input id="mult" type="radio" name="op" value="multi"> x <input
+					id="divi" type="radio" name="op" value="divisao"> &divide; <br>
+				<br> <em> <strong>Dificuldade: </strong>
+				</em> <br> <select id="menuDif">
+					<option value="1">Fácil</option>
+					<option value="2">Médio</option>
+					<option value="3">Difícil</option>
+					<!--<option value="4">Muito Difícil</option>-->
+				</select><br>
+				<script src="script/start.js" type="text/javascript">
+				</script>
+				<script src="script/operations.js" type="text/javascript">
+				</script>
+				<script src="script/timer.js" type="text/javascript">
+				</script>
+				<script src="script/design.js" type="text/javascript">
+				</script>
+				<script src="script/stop.js" type="text/javascript">
+				</script>
+				<script src="script/mp/multiplayer.js" type="text/javascript">
+				</script>
+				<script src="script/mp/register.js" type="text/javascript">
+				</script>
+				<script src="script/mp/join.js" type="text/javascript">
+				</script>
+				<script src="script/mp/notify.js" type="text/javascript">
+				</script>
+				<script src="script/mp/callOperation.js" type="text/javascript">
+				</script>
+				<script src="script/mp/update.js" type="text/javascript"></script>
+				<script src="script/mp/rankingMulti.js" type="text/javascript">
+				</script>								
+				<input id="begin" type="button" value="Começar Jogo"
+				onclick="validate()"> <input id="abandon" type="button"
+				value="Abandonar Jogo" onclick="stopGame()" disabled="disabled"> <input id="multip" type="button" value="MultiJogador" onclick="startMultiplayer()">
+			</div>
+
+		</div>
+		<div id="cenario">
+			<div id="jogo">
+				<br> <label id="contas"></label>
+			</div>
+			<div id="answer">
+				<script src="script/sp/result.js" type="text/javascript">
+					
+				</script>
+				<script src="script/checkMulti.js" type="text/javascript"></script>
+				<script src="script/mp/ok.js" type="text/javascript"></script>
+				<script src="script/sp/okButton.js" type="text/javascript"></script>
+				<script src="script/sp/qHonra.js" type="text/javascript"></script>
+				<script src="script/goBack.js" type="text/javascript"></script>
+				<input type="text" style="width: 50px" id="resposta"> <input
+					type="button" id="buttonOK" value="ok" onclick="check()" >
+			</div>
+			<div id="time">
+				<label id="tempo"></label>
+			</div>
+			<div id="player1">
+				<div id="background1"></div>
+			</div>
+			<div id="player2">
+				<div Id="background2"></div>
+			</div>
+			<table id="honra">
+				<tr>
+					<th>Lugar</th>
+					<th>Nome</th>
+					<th>Pontos</th>
+				</tr>
+			</table>
+			<input id="goBack" type="button" value="Voltar A Jogar"
+						onclick="goBack()">
+		</div>
+	</div>
+
+</body>
+</html>
